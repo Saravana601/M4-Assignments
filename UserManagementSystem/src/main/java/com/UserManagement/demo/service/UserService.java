@@ -1,40 +1,54 @@
-package com.UserManagement.demo;
+package com.UserManagement.demo.service;
 
+import com.UserManagement.demo.model.User;
+import com.UserManagement.demo.repository.DataSource;
+import com.UserManagement.demo.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@RestController
-public class UserController {
+@Service
+public class UserService {
+
     @Autowired
-    List<User> userList;
+    UserRepo userRepo;
 
+    // Get All User
 
-    // addUser
+    public List<User> getAllUser() {
+        return userRepo.getUserList();
+    }
 
-    @PostMapping("addUser")
-    public String addUser(@RequestBody User user){
+    // Add User
+
+    public String inputUser(User user) {
+        List<User> users = getAllUser();
+
         Integer userId = user.getUserId();
 
-        for (User existingUser : userList) {
+        for (User existingUser : users) {
             if (existingUser.getUserId().equals(userId)) {
                 return "User with the same userId already exists.";
             }
         }
 
-        userList.add(user);
+        users.add(user);
         return "User Added Successfully";
     }
 
+    // Add All User
+    public String addAllUser(List<User> user) {
+        List<User> users = getAllUser();
+        users.addAll(user);
+        return "All Users added";
+    }
 
-    // getUser/{userid}
+    // Get User
+    public User getUser(Integer userId) {
+        List<User> users = getAllUser();
 
-    @GetMapping("getUser/{userId}")
-    public User getUser(@PathVariable Integer userId) {
-        System.out.println("Request received for userId: " + userId);
-
-        for (User user : userList) {
+        for (User user : users) {
             if (user.getUserId().equals(userId)) {
                 System.out.println("User found: " + user.getUserName());
                 return user;
@@ -46,20 +60,11 @@ public class UserController {
     }
 
 
-    // getAllUser
-
-    @GetMapping("getAllUser")
-    public List<User> getAllUser(){
-        return userList;
-    }
-
-
-    // updateUserInfo
-
-    @PutMapping("update/{userId}")
-    public String updateUserInfo(@PathVariable Integer userId, @RequestBody User updatedUser) {
+    // Update user
+    public String updateInfo(Integer userId, User updatedUser) {
+        List<User> users = getAllUser();
         User existingUser = null;
-        for(User user : userList){
+        for(User user : users){
             if(user.getUserId().equals(userId)){
                 existingUser = user;
                 break;
@@ -78,15 +83,13 @@ public class UserController {
         return "User Info Updated Successfully";
     }
 
+    // Delete User
 
-    // deleteUser
-
-    @DeleteMapping("deleteUser/{userId}")
-    public String deleteUser(@PathVariable Integer userId) {
-
-        for (User user : userList) {
+    public String deleteUser(Integer userId) {
+        List<User> users = getAllUser();
+        for (User user : users) {
             if (user.getUserId().equals(userId)) {
-                userList.remove(user);
+                users.remove(user);
                 return "User deleted Successfully";
             }
         }

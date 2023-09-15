@@ -1,4 +1,4 @@
-package com.UserManagement.demo;
+package com.UserManagement.demo.model;
 
 public class User {
     private Integer userId;

@@ -1,5 +1,6 @@
-package com.UserManagement.demo;
+package com.UserManagement.demo.repository;
 
+import com.UserManagement.demo.model.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-public class BeanConfiguration {
+public class DataSource {
 
     @Bean
     public List<User> returnList(){
