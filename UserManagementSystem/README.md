@@ -8,7 +8,7 @@
     <img alt="Maven" src="https://img.shields.io/badge/maven-3.0.5-blue.svg" />
 </a>
 <a href="Spring Boot url" >
-    <img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-3.0.6-yellow.svg" />
+    <img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-3.1.3-yellow.svg" />
 </p>
 
 
