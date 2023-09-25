@@ -1,4 +1,15 @@
-# User Management System With Validation
+# <p align="center">User Management System With Validation</p>
+
+<p align="center">
+<a href="Java url">
+    <img alt="Java" src="https://img.shields.io/badge/Java->=8-purple.svg" />
+</a>
+<a href="Maven url" >
+    <img alt="Maven" src="https://img.shields.io/badge/maven-3.0.5-blue.svg" />
+</a>
+<a href="Spring Boot url" >
+    <img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-3.1.3-yellow.svg" />
+</p>
 
 ## Project Description
 This Spring Boot project is a User Management System designed to manage user data efficiently. It provides RESTful API endpoints for various user-related operations, including adding users, retrieving user information, updating user details, and deleting users. The project incorporates data validation using Spring Boot annotations to ensure data integrity.
@@ -19,6 +30,7 @@ This Spring Boot project is a User Management System designed to manage user dat
   - userType (Type)
   - userCreateDate (LocalDate)
   - userCreateTime (LocalTime)
+- List: Used to store user objects in memory.
 
 ## Functionality
 ### Controller
