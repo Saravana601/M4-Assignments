@@ -58,7 +58,10 @@ public class UserService {
     public String removeUserById(Integer userId) {
         List<User> users = getAllUser();
         for(User user : users){
-            if(user.getUserId().equals(userId)) return user.getUserName() + " got deleted";
+            if(user.getUserId().equals(userId)) {
+                users.remove(user);
+                return user.getUserName() + " got deleted";
+            }
         }
         return "userId not found";
     }
