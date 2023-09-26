@@ -73,6 +73,6 @@ To use this project, follow these steps:
 Contributions are welcome! Please fork the repository and create a pull request with your improvements.
 
 ## Contact
-If you have any questions or suggestions, feel free to contact us at [Gmail](saravanad2401@gmail.com).
+If you have any questions or suggestions, feel free to contact me at [Gmail](saravanad2401@gmail.com).
 
 
