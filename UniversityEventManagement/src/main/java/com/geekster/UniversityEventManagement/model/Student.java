@@ -1,8 +1,6 @@
 package com.geekster.UniversityEventManagement.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -29,5 +27,6 @@ public class Student {
     @Min(18) @Max(25)
     private Integer age;
 
+    @Enumerated(EnumType.STRING)
     private DepartmentType department;
 }
