@@ -72,7 +72,7 @@ Handles address-related operations.
 To run the project, follow these steps:
 
 1. Clone this repository.
-2. Configure your MySQL database connection properties in the application.properties or application.yml file.
+2. Configure your MySQL database connection properties in the application.properties.
 3. Run the `EmployeeAddressApplication` class as the main entry point.
 
 ## Project Summary
