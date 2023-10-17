@@ -1,4 +1,4 @@
-# TodoApp
+# <p align = center> TodoApp </p>
 
 ## Frameworks and Language Used
 
