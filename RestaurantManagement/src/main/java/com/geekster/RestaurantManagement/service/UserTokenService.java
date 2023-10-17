@@ -17,6 +17,7 @@ public class UserTokenService {
         iUserTokenRepository.save(token);
     }
 
+
     // This method checks email is valid or not
     public boolean authenticate(AuthenticationInput authenticationInput) {
         String existingEmail = authenticationInput.getEmail();
