@@ -30,7 +30,7 @@
 - There is no explicit database in this application; instead, the data is stored in-memory as a list of `Todo` objects.
 - The `Todo` class represents a todo item with properties like `todoId`, `todoName`, and `isTodoDone`.
 
-## Data Structures Used in Your Project
+## Data Structures Used
 
 - ArrayList: An ArrayList is used to store and manage the list of `Todo` objects.
 
